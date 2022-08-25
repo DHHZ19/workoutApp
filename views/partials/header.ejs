@@ -1,0 +1,37 @@
+<header>
+  <nav class="grey darken-3">
+    <div class="nav-wrapper container">
+      <a href="#!" class="brand-logo center">Workouts</a>
+      <a
+        href="#"
+        data-target="mobile-demo"
+        class="sidenav-trigger show-on-large"
+        ><i class="fas fa-bars"></i
+      ></a>
+      <ul class="sidenav" id="mobile-demo">
+        <li>
+          <div class="user-view">
+            <div class="background">
+              <img
+                src="https://media.istockphoto.com/photos/gym-background-fitness-weight-equipment-on-empty-dark-floor-picture-id1213615970?k=20&m=1213615970&s=612x612&w=0&h=S2Ny5JNrAlcpZ_0mt76CKAwARqvJN5glvHpB9fD3DA0="
+              />
+            </div>
+            <a href="#user"
+              ><img
+                class="circle"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-CJx8LIHC6c0OfyEywvco82gUxvwPJd4cX27qPjxH&s"
+            /></a>
+            <a href="#name"><span class="black-text name upperCase"><%= user.userName %> has <%= left %> wokouts left to do.</a>
+            <a href="#email"
+              ></a
+            >
+          </div>
+        </li>
+        <li><a href="/todos">Home</a></li>
+        <li><a href="/todos/workouts">Workouts</a></li>
+        <li><a href="">Dashboard</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>

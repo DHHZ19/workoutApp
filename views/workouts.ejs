@@ -1,0 +1,39 @@
+<%- include('./partials/head.ejs') %> 
+    <%-include('./partials/header.ejs') %> 
+    <main>
+      <h1>Save your favorite workouts for future use! </h1>
+      <% exerciseProfile.forEach( el => { %>
+            <h5><%= el.exerciseTitle %></h5>
+            <li class='todoItem exercise-profile' data-id='<%=el._id%>'>
+              <span class='<%= el.selected === true ? 'selected fa-solid fa-square-check' : 'non fa-solid fa-square'%>'></span>
+              <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.exercise %></span>
+               <%= el.exerciseItem.map(x => x) %>
+               <span class="del" > <span class="material-icons">
+                delete_sweep
+                </span> </span>
+            </li>
+    <% }) %>    
+    <form class="addAnotherItem" action="/todos/ceateExerciseProfile" method="POST">
+      <input 
+        type="text"
+        placeholder="Enter Workout Title"
+        name="exerciseTitle"
+      />
+      <input type="text" placeholder="Workout Item" name="exerciseItem" />
+      <input  class="this" type="submit" />
+    </form>
+    <input type="button" id="addAnotherItem" value="Add Another Workout"> 
+  </main>   
+    <script>
+      document.querySelector('#addAnotherItem').addEventListener('click', createInput)
+      function createInput(){        
+        const input = document.createElement('input')
+        input.type='text'
+        input.placeholder = 'Workout Item'
+        input.name="exerciseItem"
+        const beforeNode = document.querySelector('.this')
+        document.querySelector(".addAnotherItem").insertBefore(input, beforeNode)
+      }
+    </script>
+    <%- include('./partials/footer.ejs') %> 
+

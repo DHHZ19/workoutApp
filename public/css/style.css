@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+html {
+  font-family: "Bebas Neue" !important;
+  font-size: 16px;
+}
+h1, h2{
+  margin: .67rem 0;
+}
+h1,
+h2,
+p {
+  font-size: 2.4rem;
+  text-align: center;
+}
+p span {
+  font-size: xx-large;
+}
+.nav-wrapper{
+  font-size: xx-large !important;
+}
+body {
+  font-family: "Bebas Neue" !important;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+.not {
+  text-decoration: underline;
+}
+
+main {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(212, 8, 234) !important;
+  text-shadow: /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
+  margin: 0 auto;
+}
+.del:hover {
+  cursor: pointer;
+}
+
+.button_accept:hover {
+  background: #3bec34;
+}
+li.todoItem {
+  list-style-type: none;
+  font-size: x-large;
+  /** the image will be vertically aligned in the center **/
+  background: url("../images/workoutLIst.svg") left center no-repeat;
+  /** move the text to the right **/
+  margin: 10px;
+  padding-left: 50px;
+}
+#countdown {
+  font-size: xx-large;
+}
+
+/* label color */
+.input-field label {
+  color: balck !important;
+}
+/* label focus color */
+.input-field input[type="text"]:focus + label {
+  color: #000 !important;
+}
+/* label underline focus color */
+.input-field input[type="text"]:focus {
+  border-bottom: 1px solid #000 !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #000;
+}
+input {
+  font-size: 1.5rem !important;
+}
+input[type="submit"] {
+  height: 30px;
+  background-color: #8208e6;
+  border: solid black 3px;
+  margin: 3px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.upperCase::first-letter {
+  text-transform: capitalize;
+}
+.del {
+  margin: 10px;
+  width: 20vw;
+  font-size: larger;
+}
+/* Mobile Speficic Query's*/
+
+/* 950px*/
+@media screen and (max-width: 950px) {
+  .button_accept {
+    width: 35%;
+  }
+  main {
+    width: 85vw;
+  }
+}
+/* > 500*/
+@media screen and (min-width: 500){
+  li.exercise-profile{
+    font-size: smaller;
+  }
+  .todoItem{
+    text-align: center;
+  }
+}
+/* Timer CSS */
+
+.timer {
+  display: inline-block;
+  padding: 24px 32px;
+  border-radius: 30px;
+  background: white;
+}
+
+.timer__part {
+  font-weight: bold;
+}
+
+.timer__btn {
+  width: 50px;
+  height: 50px;
+  margin-left: 16px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background: #8208e6;
+  cursor: pointer;
+}
+
+.timer__btn--start {
+  background: #00b84c;
+}
+
+.timer__btn--stop {
+  background: #ff0256;
+}
+/* Timer CSS */
+.containerTimer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+#addAnotherItem{
+  color: black;
+  background: #8208e6;
+  cursor: pointer;
+}
+form.addAnotherItem{
+justify-content: center;
+margin-top: 5vh;
+display: flex;
+width: 75%  ;
+justify-content: center;
+flex-direction: column;
+}
+@media screen and (max-width: 500px){
+  li.todoItem.exercise-profile{
+    background: none;
+    padding: 0%;
+    font-size: 1.2rem;
+  }
+  .todoItem{
+    text-align: center;
+  }
+}
