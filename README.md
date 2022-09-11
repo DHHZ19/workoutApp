@@ -17,4 +17,4 @@ I would use React to !
 
 ## Lessons Learned:
 
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those *whoa this is awesome* or *fuck yeah I did it!* moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
+I learned that when creating an application with many diffrent data inputs there can be many ways to send handle data coming from your database displaying that in the views. There are conventions like MVC that help with the strucure of your web apps speeding up development time and mental overhead.
